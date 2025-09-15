@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEV Blogs - A Blog for Developers, by Developers</title>
+
+  <!-- SEO Meta Tags for search engine optimization -->
+  <meta name="description" content="A futuristic, SEO-optimized blog for tech-savvy audiences. Covering topics in Artificial Intelligence, Software Development, Web3, FinTech, and more." />
+  <meta name="keywords" content="Tech Blog, AI, Software Development, Web3, FinTech, Business, Startups, DEV Blogs, Node.js, React, Python" />
+  
+  <!-- Open Graph / Facebook meta tags for rich social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DEV Blogs - The Future of Tech Insights" />
+  <meta property="og:description" content="Explore cutting-edge articles on AI, Development, Finance, and more. Stay ahead of the curve with DEV Blogs." />
+  <meta property="og:image" content="https://picsum.photos/1200/630" />
+
+  <!-- Twitter Card meta tags for rich sharing on Twitter/X -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="DEV Blogs - The Future of Tech Insights" />
+  <meta property="twitter:description" content="Explore cutting-edge articles on AI, Development, Finance, and more. Stay ahead of the curve with DEV Blogs." />
+  <meta property="twitter:image" content="https://picsum.photos/1200/630" />
+
+  <!-- Google Fonts import for Orbitron (display) and JetBrains Mono (body/code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS from CDN for rapid UI development -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* 
+      Global CSS variables for a consistent, themeable design system.
+      This defines the entire color palette for the futuristic dark mode UI.
+    */
+    :root {
+      --bg-primary: #0a0a1a;
+      --bg-surface: #111a2e;
+      --glow-cyan: #00f5ff;
+      --accent-purple: #667eea;
+      --accent-red: #ff4e50;
+      --accent-pink: #ff6b9d;
+      --accent-mint: #a5ff8a;
+      --accent-yellow: #f9d423;
+      --accent-light-blue: #4facfe;
+      --accent-emerald: #43e97b;
+      --accent-teal: #38f9d7;
+      --accent-orange: #fa709a;
+      --accent-lavender: #a8edea;
+      --accent-light-pink: #fed6e3;
+      --text-primary: #e0e0ff;
+      --text-secondary: rgba(224, 224, 255, 0.7);
+      --border-color: rgba(0, 245, 255, 0.1);
+      --border-color-hover: rgba(0, 245, 255, 0.4);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'JetBrains Mono', monospace;
+      /* Subtle radial gradient for a deep-space background effect */
+      background-image: radial-gradient(circle at 25% 25%, var(--bg-surface) 0%, var(--bg-primary) 50%);
+      /* Custom futuristic crosshair cursor */
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none"><path stroke="%2300f5ff" stroke-width="2" d="M12 0V24M0 12H24"/></svg>') 12 12, auto;
+    }
+    /* Set the display font for all headings */
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 5px rgba(0, 245, 255, 0.2);
+    }
+    /* Animation for the 3D-style holographic icons */
+    .holo-icon {
+      animation: rotate-holo 30s linear infinite;
+      transform-style: preserve-3d;
+      filter: drop-shadow(0 0 10px var(--glow-cyan));
+    }
+    @keyframes rotate-holo {
+      0% { transform: rotateY(0deg) rotateX(10deg); }
+      100% { transform: rotateY(360deg) rotateX(10deg); }
+    }
+    /* Styling and animation for the floating background particles */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--glow-cyan);
+      opacity: 0;
+      animation: float 20s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-100vh) translateX(20vw); opacity: 0; }
+    }
+  </style>
+<!-- 
+  Import Map: Manages JavaScript module dependencies.
+  This allows using bare module specifiers (e.g., "react") in JS files,
+  which the browser resolves to the full URLs specified here.
+  It avoids the need for a build step (like Webpack/Vite) for dependency resolution.
+-->
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.14.0",
+    "marked": "https://aistudiocdn.com/marked@^13.0.1",
+    "gray-matter": "https://aistudiocdn.com/gray-matter@^4.0.3"
+  }
+}
+</script>
+</head>
+<body>
+  <!-- The root element where the React application will be mounted -->
+  <div id="root"></div>
+  <!-- The entry point script for the application -->
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

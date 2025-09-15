@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Alex Johnson",
+    "avatarUrl": "https://i.pravatar.cc/150?u=alexjohnson",
+    "bio": "Alex is a full-stack developer and AI enthusiast with over a decade of experience building scalable applications. He specializes in machine learning integrations and cloud architecture."
+  },
+  {
+    "name": "Samantha Lee",
+    "avatarUrl": "https://i.pravatar.cc/150?u=samanthalee",
+    "bio": "Samantha is a frontend expert passionate about creating beautiful and performant user experiences. She is a core contributor to several open-source JavaScript frameworks."
+  },
+  {
+    "name": "David Chen",
+    "avatarUrl": "https://i.pravatar.cc/150?u=davidchen",
+    "bio": "David is a blockchain architect and a proponent of decentralized technologies. He focuses on smart contract security and the future of Web3 governance."
+  },
+  {
+    "name": "Maria Garcia",
+    "avatarUrl": "https://i.pravatar.cc/150?u=mariagarcia",
+    "bio": "Maria is a FinTech analyst and journalist who covers the intersection of finance, technology, and regulation. Her work provides insights into the future of money."
+  }
+]
